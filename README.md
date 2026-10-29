@@ -1,2 +1,36 @@
-# hirespeak-releases
-Official HireSpeak Windows downloads and application updates. Release assets only; no personal training data.
+# HireSpeak
+
+Windows 面试英语训练应用。本仓库仅提供通用安装包和应用更新，不托管用户的简历、个人题库、训练记录或备份。
+
+## 安装
+
+从 [最新版本](https://github.com/tsd619124/hirespeak-releases/releases/latest) 下载 `HireSpeak-Setup-版本-x64.exe`，适用于 Windows 10 / 11 x64，无需安装 Node.js 或注册 GitHub 账号。
+
+安装包暂未代码签名，Windows 可能提示未知发布者。请只从本仓库下载，并核对 Release 中的 SHA-256。
+
+## 保留个人资料
+
+- 新用户可直接安装，在应用中添加简历与岗位资料。
+- 从含个人题库的旧版本升级前，请先导出备份、关闭应用，并使用开发者单独提供的私密迁移包准备本机资料，再覆盖安装。不要先卸载或删除 AppData。
+- 个人资料和训练记录保存在当前用户的数据目录。完整备份可能含个人信息与录音，请勿上传到本仓库的 Issue、Discussion 或其他公开位置。
+- 主动使用 AI 功能时，相关材料可能发送给你选择的服务商；这与程序更新下载无关。
+
+## 后续更新
+
+1.21.0 起的正式安装包内置更新源。在「设置 → 应用更新」检查新版本，按需下载并确认安装。更新不会自动下载，也不会在退出时自动安装；安装前保存本机恢复副本。
+
+可信更新目录：
+
+```text
+https://github.com/tsd619124/hirespeak-releases/releases/latest/download/
+```
+
+此前手动配置过其他更新源的用户，需要核对并切换到上述地址。更新只替换应用程序，不上传个人资料。仍建议定期导出完整备份。
+
+## Release 文件
+
+- `.exe`：Windows 安装包。
+- `.exe.blockmap`：更新器使用的差量索引，普通用户无需手动下载。
+- `latest.yml`：更新版本与文件校验清单，供应用自动读取。
+
+请以每个 Release 的验证范围为准。构建和下载验证不等于已经完成所有 Windows 设备的安装与升级验收。
